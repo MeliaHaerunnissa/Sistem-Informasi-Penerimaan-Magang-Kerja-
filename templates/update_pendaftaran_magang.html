@@ -1,0 +1,99 @@
+{% include 'includes/head.html' %}
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ubah Data Pendaftaran Magang</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <link rel="stylesheet" href="/static/plugins/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="/static/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="/static/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="/static/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+  <link rel="stylesheet" href="/static/dist/css/adminlte.min.css">
+  <script src="/static/plugins/jquery/jquery.min.js"></script>
+</head>
+{% include 'includes/sidebar_admin.html' %}
+		<div class="content-wrapper">
+    		<section class="content-header">
+      			<div class="container-fluid">
+        			<div class="row mb-12">
+          				<div class="col-sm-12">
+          					<form action="{{ url_for('update_prosess') }}" method = "post" enctype="multipart/form-data">
+            				<h1>Ubah Data Pendaftaran Mahasiswa Magang</h1>
+          				</div>
+          			</div>
+          	</div>
+        </section>
+
+        <section class="content">
+            <div class="container">
+          			<div class="col-md-12">
+          				  <div class="card card-primary">
+          					   <div class="card-header">
+          						    <h3 class="card-title">Form Ubah Data Pendaftaran</h3>
+          					   </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nama_lengkap">Nama Lengkap: </label>
+                            <input type="nama_lengkap" name="nama_lengkap" class="form-control" id="nama_lengkap" placeholder="Nama Lengkap"
+                            value="{{ data[2] }}" size="30" maxlength="30" />
+                        </div>
+
+        							  <div class="form-group col-md-6">
+                            <label for="nim">NIM: </label>
+                            <input type="nim" name="nim" class="form-control" id="nim" placeholder="NIM" 
+                            value="{{ data[3] }}" size="30" maxlength="30" />
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="program_studi">Program Studi: </label>
+                            <input type="program_studi" name="program_studi" class="form-control" id="program_studi" placeholder="Program Studi"
+                            value="{{ data[4] }}" size="30" maxlength="30" />
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="universitas">Universitas: </label>
+                            <input type="universitas" name="universitas" class="form-control" id="universitas" placeholder="Universitas"
+                            value="{{ data[5] }}" size="30" maxlength="30" />
+                        </div>
+
+        							  <div class="form-group col-md-6">
+        								    <label for="tanggal_masuk">Periode Masuk: </label>
+        								    <input type="date" name="tanggal_masuk" class="form-control" id="tanggal_masuk" placeholder="Tanggal Masuk"
+        								    value="{{ data[9] }}" size="20" maxlength="20" />
+        							  </div>
+
+        							  <div class="form-group col-md-6">
+        								    <label for="tanggal_selesai">Periode Selesai: </label>
+        								    <input type="date" name="tanggal_selesai" class="form-control" id="tanggal_selesai" placeholder="Tanggal Selesai"
+        								    value="{{ data[10] }}" size="20" maxlength="20" />
+        							  </div>
+
+        							  <div class="form-group col-md-6">
+        								    <label for="no_telp">No Telp: </label>
+        								    <input type="no_telp" name="no_telp" class="form-control" id="no_telp" placeholder="No Telp"
+        								    value="{{ data[12] }}" size="20" maxlength="20" />
+        							  </div>
+
+        							  <div class="form-group col-md-6">
+                            <label for="status">Status: </label>
+                            <select type="status" name="status" class="form-control" id="status">
+                              <option value="Diterima">Disetujui</option>
+                              <option value="Tidak Diterima">Tidak Disetujui</option
+                              value="{{ data[13] }}" size="20" maxlength="20" />
+        							  </div>
+                        <input type="hidden" name="no" value="{{ data [0] }}" />
+                    </div>
+                  </div>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </form>
+            </div>
+        </div>
+      </section>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+{% include 'includes/head.html' %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Badan Narkotika Nasional</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+    <link rel="stylesheet" href="/static/plugins/fontawesome-free/css/all.min.css">
+
+    <link rel="stylesheet" href="/static/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/static/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="/static/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="/static/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="/static/plugins/jquery/jquery.min.js"></script>
+
+    <script src="/static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/static/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/static/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/static/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="/static/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="/static/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="/static/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="/static/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="/static/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="/static/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <style>
+        .content-wrapper {
+            height: 100%;
+            width: 100%;
+        }
+
+        .content-wrapper {
+            background-color: #ffffff;
+        }
+    </style>
+    
+</head>
+<body>
+{% include 'includes/sidebar_mahasiswa.html' %}
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+        <a class="nav-link" data-widget="pushmenu" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+  </ul>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="">
+                <i class="far fa-bell"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="{{ url_for('login') }}" role="button">
+            <i class="fas fa-sign-in-alt"></i>
+          </a>
+        </li>
+    </ul>
+  </nav>
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-10">
+                    <center><h1>Badan Narkotika Nasional</h1>
+                    <h1>Kabupaten Sleman</h1></center>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-10">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                            </ul>
+                            
+                        <div class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/static/rapat1.jpeg" width="1500" height="600">  
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/static/rapat2.jpeg" width="1500" height="600">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/static/rapat3.jpeg" width="1500" height="600">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/static/rapat4.jpeg" width="1500" height="600">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+
+                     <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                             <h3 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  Badan Narkotika Nasional
+                                </button>
+                              </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                              <div class="card-body">
+                                <h4><p>Badan Narkotika Nasional Republik Indonesia</p></h4>
+                                <p>Badan Narkotika Nasional (disingkat BNN) adalah sebuah Lembaga Pemerintah Non Kementerian (LPNK) Indonesia yang mempunyai tugas melaksanakan tugas pemerintahan di bidang pencegahan, pemberantasan penyalahgunaan dan peredaran gelap narkotika, psikotropika, prekursor dan bahan adiktif lainnya kecuali bahan adiktif untuk tembakau dan alkohol. BNN dipimpin oleh seorang kepala yang bertanggung jawab langsung kepada Presiden.
+                                <br>
+                                <p>Dasar hukum BNN adalah Undang-Undang Nomor 35 tahun 2009 tentang Narkotika. Sebelumnya, BNN merupakan lembaga nonstruktural yang dibentuk berdasarkan Keputusan Presiden Nomor 17 Tahun 2002, yang kemudian diganti dengan Peraturan Presiden Nomor 83 Tahun 2007.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-header" id="headingTwo">
+                             <h3 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                  Visi dan Misi BNN
+                                </button>
+                              </h5>
+                            </div>
+
+                            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                              <div class="card-body">
+                                <h4><p>Visi</p></h4>
+                                <p>Menjadi Lembaga  Non Kementerian yang profesional dan mampu menggerakkan seluruh koponen masyarakat, bangsa dan negara Indonesia dalam melaksanakan Pencegahan dan Pemberantasan Penyalahgunaan dan Peredaran Gelap Narkotika, Psikotropika, Prekursor dan Bahan Adiktif Lainnya di Indonesia.</p>
+                                <br>
+                                <h4><p>Misi</p></h4>
+                                <p>1. Menyusun kebijakan nasional P4GN</
+                                    <p>2. Melaksanakan operasional P4GN sesuai bidang tugas   dan kewenangannya.</p>
+                                    <p>3. Mengkoordinasikan pencegahan dan pemberantasan penyalahgunaan dan peredaran gelap narkotika, psikotropika, prekursor dan bahan adiktif lainnya (narkoba)</p>
+                                    <p>Memonitor dan mengendalikan pelaksanaan kebijakan nasional P4GN.</p>
+                                    <p>Menyusun laporan pelaksanaan kebijakan nasional P4GN dan diserahkan kepada Presiden.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-header" id="headingThree">
+                              <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  Tata Tertib BNN
+                                </button>
+                              </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                              <div class="card-body">
+                                <h4><p>Tata Tertib BNN</p></h4>
+                                <p>Senin - Kamis</p>
+                                <p>Baju Putih dan Celana Hitam</p>
+                                <br>
+                                <p>Rabu - Jumat</p>
+                                <p>Baju Batik</p>
+                                <br>
+                                <p>Kamis Pahing</p>
+                                <p>Baju Adat</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-header" id="headingFour">
+                              <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                  Jam Kerja BNN
+                                </button>
+                              </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                              <div class="card-body">
+                                <h4><p>Tata Tertib BNN</p></h4>
+                                <p>Senin - Kamis</p>
+                                <p>08.00 s/d 16.00</p>
+                                <br>
+                                <p>Jumat</p>
+                                <p>08.00 s/d 16.30</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    </div>
+                </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.663576083196!2d110.35338515058764!3d-7.719198678595647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a58ca0470d319%3A0x32b2cd473d22c2a5!2sBNN%20Kabupaten%20Sleman!5e0!3m2!1sid!2sid!4v1630261853358!5m2!1sid!2sid" width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <hr>
+                        <div class="row d-flex align-items-center">
+                            <div class="col-md-7 col-lg-8">
+                                <p class="text-center text-md-left">©
+                                    <a href="https://slemankab.bnn.go.id/">
+                                        <strong>Badan Narkotika Nasional Kabupaten Sleman</strong>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="col-md-5 col-lg-4 ml-lg-0">
+                                <div class="text-center text-md-right">
+                                    <ul class="list-unstyled list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="btn-floating btn-sm rgba-blue-slight mx-1">
+                                                <a href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fslemankab.bnn.go.id%2Fvisi-dan-misi-bnn%2F&linkname=Visi%20dan%20Misi%20BNN&linknote=">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="btn-floating btn-sm rgba-blue-slight mx-1">
+                                                <a href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fslemankab.bnn.go.id%2Fvisi-dan-misi-bnn%2F&linkname=Visi%20dan%20Misi%20BNN&linknote=">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="btn-floating btn-sm rgba-blue-slight mx-1">
+                                                <a href="https://www.instagram.com/lensa_bnn/">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="btn-floating btn-sm rgba-blue-slight mx-1">
+                                                <a href="https://www.youtube.com/channel/UCkmxYfYaqHWIlJdpQTibXUA">
+                                                <i class="fab fa-youtube"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </body>
+            </html>
